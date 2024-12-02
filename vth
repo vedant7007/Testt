@@ -2,26 +2,49 @@
 #include<string.h>
 void main()
 {
-char a,str1[30];
-int len,flag=1,i=0;
-printf("enter the  string");
+char str1[30],str2[20];
+printf("enter the string");
 gets(str1);
-len=strlen(str1);
-printf("the length of string is %d\n",len);
-for(i=0;i<len/2;i++)
-{
-if(str1[i]!=str1[len-i-1])
-{
-flag=0;
-break;
+gets(str2);
+strcpy(str2,str1);
+printf("the copied of string is %s%s",str1,str2);
 }
-}
-if(flag==1)
+
+
+
+#include<stdio.h>
+#include<string.h>
+void main()
 {
-printf("the %s string is palindrome\n",str1);
+char a,str1[30],str2[40];
+printf("enter the 1st string");
+gets(str1);
+printf("enter the 2nd string");
+gets(str2);
+a=(strcmp(str1,str2));
+if(a==0)
+{
+printf("the  strings are same");
 }
 else
 {
-printf("the %s string is not palindrome\n",str1);
+printf("the strings are not same");
 }
+}
+
+
+
+
+
+#include<stdio.h>
+#include<string.h>
+void main()
+{
+char str1[30],str2[20];
+printf("enter the 1st  string");
+gets(str1);
+printf("enter the 2nd string");
+gets(str2);
+strcat(str2,str1);
+printf("the concatenated of string is %s",str2);
 }
