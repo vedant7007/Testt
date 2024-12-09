@@ -1,39 +1,14 @@
-//wap to concatinate a string at the end of another string without using built in fn//
-#include<stdio.h>
-#include<string.h>
-void main()
-{
-char a[20],b[20];
-printf("Enter the string1");
-scanf("%s",&a);
-printf("Enter the string2");
-scanf("%s",&b);
-int i,j;
-i=strlen(a);
-for(j=0;b[j]!='\0';i++,j++)
-{
-a[i]=b[j];
-}
-a[i]='\0';
-puts(a);
-}
-
-
-//wap to copy the program of first string to another string without using strcpy progam//
 #include<stdio.h>
 void main()
 {
-char a[20],b[20];
-printf("Enter the string1");
-scanf("%s", a);
-int i;
-while (a[i] != '\0') {
-b[i] = a[i];
-i++;
+int rem,rev=0,n;
+printf("enter the value of n");
+scanf("%d",&n);
+while(n>0)
+{
+rem=n%10;
+rev=rev*10+rem;
+n=n/10;
 }
- b[i] = '\0';
-printf("The copied string is : %s\n",b);
+printf("the reverse of the num is %d\n",rev);
 }
-
-
-
